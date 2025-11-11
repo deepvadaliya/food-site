@@ -1,19 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Yum-Food | Fresh & Tasty</title>
+  <title>Yum-Food | Cinematic</title>
 
-  <!-- Google Fonts + Font Awesome for icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header / Navbar -->
+  <!-- Letterbox top -->
+  <div class="letterbox top"></div>
+
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#home">
@@ -26,107 +29,114 @@
         <a href="#menu" class="nav-link">Menu</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
-        <button class="btn-primary" id="openOrder">Order Now</button>
+        <button class="btn-ghost" id="openOrder">Order</button>
       </nav>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Taste the joy — freshly prepared daily</h1>
-        <p>Locally sourced ingredients, crafted recipes and fast delivery. Your next delicious bite is a click away.</p>
+  <!-- Hero (cinematic poster) -->
+  <main id="home" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="grain"></div>
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1 class="hero-title">FEAST IN STYLE</h1>
+        <p class="hero-sub">Handcrafted dishes. Moody ambiance. Delivered like a scene from your favourite film.</p>
         <div class="hero-ctas">
-          <a href="#menu" class="btn-outline">See Menu</a>
-          <button class="btn-primary" id="openOrder2">Order Now</button>
+          <a href="#menu" class="btn-solid">View Menu</a>
+          <button class="btn-ghost" id="openOrder2">Order Now</button>
         </div>
-        <ul class="hero-features">
-          <li><i class="fa-solid fa-truck-fast"></i> Fast delivery</li>
-          <li><i class="fa-solid fa-leaf"></i> Fresh ingredients</li>
-          <li><i class="fa-solid fa-star"></i> Top rated</li>
-        </ul>
+        <div class="hero-meta">
+          <span class="meta-pill"><i class="fa-solid fa-film"></i> Cinematic menu</span>
+          <span class="meta-pill"><i class="fa-solid fa-clock"></i> Ready in 20–30 mins</span>
+        </div>
       </div>
 
-      <div class="hero-image">
-        <div class="card-plate">
-          <img src="https://i.imgur.com/nQxgU9k.jpg" alt="Delicious food">
+      <div class="hero-right">
+        <div class="poster">
+          <img src="https://i.imgur.com/nQxgU9k.jpg" alt="Featured dish">
+          <div class="poster-caption">
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+            <div class="poster-title">Signature Pizza</div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Menu -->
+  <!-- Menu section (cards with cinematic frames) -->
   <section id="menu" class="section menu-section">
     <div class="container">
       <div class="section-head">
-        <h2>Our Specials</h2>
-        <p>Handpicked favorites made with care.</p>
+        <h2>Now Showing: Our Specials</h2>
+        <p>Designed like a film lineup — each dish takes center stage.</p>
       </div>
 
       <div class="cards-grid">
-        <!-- Card 1 -->
-        <article class="food-card">
-          <div class="card-badge">Popular</div>
-          <img src="https://i.imgur.com/nQxgU9k.jpg" alt="Cheese Pizza">
-          <div class="card-body">
-            <h3>Cheese Pizza</h3>
-            <p class="muted">Classic oven-baked pizza with melted mozzarella.</p>
-            <div class="card-footer">
-              <span class="price">₹399</span>
-              <button class="btn-sm" data-item="Cheese Pizza">Add</button>
+        <article class="film-card">
+          <div class="frame">
+            <img src="https://i.imgur.com/nQxgU9k.jpg" alt="Cheese Pizza">
+            <div class="frame-gradient"></div>
+            <div class="film-caption">
+              <h3>Cheese Pizza</h3>
+              <p class="muted">Oven-kissed crust, molten cheese.</p>
+              <div class="card-actions">
+                <span class="price">₹399</span>
+                <button class="btn-sm" data-item="Cheese Pizza">Order</button>
+              </div>
             </div>
           </div>
         </article>
 
-        <!-- Card 2 -->
-        <article class="food-card">
-          <div class="card-badge badge-secondary">New</div>
-          <img src="https://i.imgur.com/w9FzC4K.jpg" alt="Classic Burger">
-          <div class="card-body">
-            <h3>Classic Burger</h3>
-            <p class="muted">Juicy patty, crisp veggies & signature sauce.</p>
-            <div class="card-footer">
-              <span class="price">₹299</span>
-              <button class="btn-sm" data-item="Classic Burger">Add</button>
+        <article class="film-card">
+          <div class="frame">
+            <img src="https://i.imgur.com/w9FzC4K.jpg" alt="Classic Burger">
+            <div class="frame-gradient"></div>
+            <div class="film-caption">
+              <h3>Classic Burger</h3>
+              <p class="muted">Juicy, smoky, unforgettable.</p>
+              <div class="card-actions">
+                <span class="price">₹299</span>
+                <button class="btn-sm" data-item="Classic Burger">Order</button>
+              </div>
             </div>
           </div>
         </article>
 
-        <!-- Card 3 -->
-        <article class="food-card">
-          <div class="card-badge">Chef</div>
-          <img src="https://i.imgur.com/VG3ltuS.jpg" alt="Creamy Pasta">
-          <div class="card-body">
-            <h3>Creamy Pasta</h3>
-            <p class="muted">Rich Alfredo tossed with herbs and parmesan.</p>
-            <div class="card-footer">
-              <span class="price">₹349</span>
-              <button class="btn-sm" data-item="Creamy Pasta">Add</button>
+        <article class="film-card">
+          <div class="frame">
+            <img src="https://i.imgur.com/VG3ltuS.jpg" alt="Creamy Pasta">
+            <div class="frame-gradient"></div>
+            <div class="film-caption">
+              <h3>Creamy Pasta</h3>
+              <p class="muted">Silky sauce, perfect tempo.</p>
+              <div class="card-actions">
+                <span class="price">₹349</span>
+                <button class="btn-sm" data-item="Creamy Pasta">Order</button>
+              </div>
             </div>
           </div>
         </article>
 
-        <!-- Card 4 (example extra) -->
-        <article class="food-card">
-          <div class="card-badge">Veg</div>
-          <img src="https://i.imgur.com/3MZ0a2k.jpg" alt="Fresh Salad">
-          <div class="card-body">
-            <h3>Fresh Salad Bowl</h3>
-            <p class="muted">Seasonal greens, seeds & tangy dressing.</p>
-            <div class="card-footer">
-              <span class="price">₹249</span>
-              <button class="btn-sm" data-item="Fresh Salad Bowl">Add</button>
+        <article class="film-card">
+          <div class="frame">
+            <img src="https://i.imgur.com/3MZ0a2k.jpg" alt="Fresh Salad">
+            <div class="frame-gradient"></div>
+            <div class="film-caption">
+              <h3>Fresh Salad Bowl</h3>
+              <p class="muted">Crisp greens, bold dressing.</p>
+              <div class="card-actions">
+                <span class="price">₹249</span>
+                <button class="btn-sm" data-item="Fresh Salad Bowl">Order</button>
+              </div>
             </div>
           </div>
         </article>
-      </div> <!-- /cards-grid -->
+      </div>
     </div>
   </section>
 
@@ -134,21 +144,23 @@
   <section id="about" class="section about-section">
     <div class="container about-grid">
       <div class="about-media">
-        <img src="https://i.imgur.com/ZV8Q0Kn.jpg" alt="Kitchen">
+        <div class="cinema-frame">
+          <img src="https://i.imgur.com/ZV8Q0Kn.jpg" alt="Kitchen">
+        </div>
       </div>
       <div class="about-content">
-        <h2>About Yum-Food</h2>
-        <p>We make food that brings people together. From small-batch sauces to daily-baked breads, our kitchen focuses on quality and consistency. We believe simple ingredients done well create unforgettable meals.</p>
+        <h2>Our Story</h2>
+        <p>Yum-Food crafts food like a film director crafts scenes. We layer flavour, texture and pace until each bite becomes a memorable moment.</p>
         <ul class="checklist">
-          <li><i class="fa-solid fa-check"></i> Fresh local produce</li>
-          <li><i class="fa-solid fa-check"></i> Clean kitchen practices</li>
-          <li><i class="fa-solid fa-check"></i> Fast & friendly delivery</li>
+          <li><i class="fa-solid fa-check"></i> Handpicked ingredients</li>
+          <li><i class="fa-solid fa-check"></i> Chef-driven recipes</li>
+          <li><i class="fa-solid fa-check"></i> Cinematic presentation</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Contact / Footer -->
+  <!-- Contact / footer -->
   <footer id="contact" class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -157,31 +169,33 @@
       </div>
 
       <div>
-        <h3>Open Hours</h3>
-        <p>Mon–Sun: 10:00 AM – 10:00 PM</p>
+        <h3>Hours</h3>
+        <p>Daily: 10:00 AM – 10:00 PM</p>
       </div>
 
       <div>
         <h3>Follow</h3>
         <div class="socials">
-          <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
     </div>
 
-    <div class="copyright">
-      © 2025 Yum-Food • Crafted with ❤️
+    <div class="site-bottom">
+      © 2025 Yum-Food • Taste the drama.
     </div>
   </footer>
 
-  <!-- Order Modal (simple) -->
+  <!-- Letterbox bottom -->
+  <div class="letterbox bottom"></div>
+
+  <!-- Order Modal (cinematic) -->
   <div id="orderModal" class="modal" aria-hidden="true">
     <div class="modal-panel">
       <button class="modal-close" id="closeModal" aria-label="Close">&times;</button>
-      <h3>Place an Order</h3>
-      <form id="orderForm">
+      <h3>Place Order</h3>
+      <form id="orderForm" class="order-form">
         <label for="item">Item</label>
         <input id="item" name="item" placeholder="Selected item" readonly>
 
@@ -195,16 +209,16 @@
         <textarea id="address" name="address" rows="3" placeholder="House / Street / City" required></textarea>
 
         <div class="modal-actions">
-          <button type="submit" class="btn-primary">Confirm Order</button>
-          <button type="button" class="btn-outline" id="cancelModal">Cancel</button>
+          <button type="submit" class="btn-solid">Confirm</button>
+          <button type="button" class="btn-ghost" id="cancelModal">Cancel</button>
         </div>
       </form>
     </div>
   </div>
 
-  <!-- Small script for interactions -->
+  <!-- Small JS for interactions -->
   <script>
-    // Toggle mobile nav
+    // Mobile nav toggle
     const navToggle = document.getElementById('navToggle');
     const nav = document.getElementById('nav');
     navToggle.addEventListener('click', () => nav.classList.toggle('open'));
@@ -221,44 +235,47 @@
       itemInput.value = selectedItem;
       orderModal.style.display = 'flex';
       orderModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
     }
     function closeModalFn() {
       orderModal.style.display = 'none';
       orderModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
     }
 
-    // open modal from header buttons
     openOrder && openOrder.addEventListener('click', () => openModal(''));
     openOrder2 && openOrder2.addEventListener('click', () => openModal(''));
 
-    // open modal when clicking card Add buttons
     document.querySelectorAll('.btn-sm').forEach(btn => {
       btn.addEventListener('click', () => openModal(btn.dataset.item));
     });
 
     closeModal.addEventListener('click', closeModalFn);
     cancelModal.addEventListener('click', closeModalFn);
+    orderModal.addEventListener('click', (e) => { if (e.target === orderModal) closeModalFn(); });
 
-    // close modal on outside click
-    orderModal.addEventListener('click', (e) => {
-      if (e.target === orderModal) closeModalFn();
-    });
-
-    // simple form submission (placeholder)
     document.getElementById('orderForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Thanks! Order received. (Demo only)');
+      alert('Order received — cinematic delivery queued. (Demo)');
       closeModalFn();
       this.reset();
     });
 
-    // Smooth scrolling for nav links
+    // Smooth scroll
     document.querySelectorAll('.nav-link').forEach(a => {
       a.addEventListener('click', (e) => {
         e.preventDefault();
         document.querySelector(a.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
         nav.classList.remove('open');
       });
+    });
+
+    // Subtle parallax on mouse move (hero)
+    const heroBg = document.querySelector('.hero-bg');
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 6;
+      const y = (e.clientY / window.innerHeight - 0.5) * 6;
+      heroBg.style.transform = `translate(${x}px, ${y}px) scale(1.02)`;
     });
   </script>
 
